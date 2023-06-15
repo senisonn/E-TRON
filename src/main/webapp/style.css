@@ -1,0 +1,225 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* RESET */
+
+
+
+
+
+* {
+  touch-action: manipulation;
+}
+
+body {
+  font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: azure;
+}
+
+.container {
+  display: none;
+  height: 100svh;
+
+  background-color: black;
+}
+.container h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.container h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.defaultScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+}
+
+/* Connection Lost */
+.connectionLostScreen {
+  background-color: #8a0e0e;
+}
+.connectionLostScreen .reload-button {
+  margin-top: 2rem;
+}
+/* Connection Lost */
+
+/* waiting Game Start */
+.waitingGameStartScreen .username {
+  margin-top: 2rem;
+}
+.waitingGameStartScreen .onlinePlayers {
+  margin-top: 2rem;
+}
+/* waiting Game Start */
+
+/* Game Is Full */
+.gameIsFullScreen {
+  background-color: #f39c12;
+}
+.gameIsFullScreen h2 {
+  margin-top: 2rem;;
+}
+.gameIsFullScreen .reload-button {
+  margin-top: 2rem;;
+}
+/* Game Is Full */
+
+/* Game Already Started */
+.gameAlreadyStartedScreen {
+  background-color: #192a56;
+}
+.gameAlreadyStartedScreen h2 {
+  margin-top: 2rem;;
+}
+.gameAlreadyStartedScreen .reload-button {
+  margin-top: 2rem;;
+}
+/* Game Already Started */
+
+/* Game */
+.gameScreen {
+  position: relative;
+  
+  height: 100%;
+}
+.gameScreen .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  
+  width: 100%;
+  
+  pointer-events: none;
+}
+.gameScreen .infos .lives {
+  margin-top: 1rem;
+}
+.gameScreen .controls {
+  display: flex;
+  
+  height: 100%;
+}
+.gameScreen .controls .control {
+  background-color: #2f3640;
+
+  width: 50%;
+  height: 100%;
+  
+  border: none;
+  cursor: pointer;
+  
+  touch-action: none;
+}
+.gameScreen .controls .control .hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.gameScreen .controls .control:hover .hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gameScreen .controls .control .hover .arrow {
+  color: white;
+  height: 6rem;
+}
+/* Game */
+
+/* Death */
+.deathScreen {
+  background-color: #c23616;
+}
+.deathScreen .rank {
+  margin-top: 2rem;
+}
+.deathScreen .reload-button {
+  margin-top: 2rem;;
+}
+/* Death */
+
+/* Death */
+.wonScreen {
+  background-color: #44bd32;
+}
+.wonScreen .reload-button {
+  margin-top: 2rem;;
+}
+/* Death */
+
+/* UTILS */
+.reload-button {
+  width: 18rem;
+
+  margin-top: 1rem;
+  padding: 1rem;
+  
+  background-color: #2f3640;
+  font-size: 1.5rem;
+  color: azure;
+
+  border: none;
+  cursor: pointer;
+
+  border-radius: 0.5rem;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  font-weight: 700;
+  letter-spacing: 0.20rem;
+  text-transform: uppercase;
+}
+.reload-button:hover {
+  background-color: #24272d;
+}

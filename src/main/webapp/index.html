@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>E-Tron</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="margin: 0; padding: 0;">
+        <!-- Connection Lost -->
+        <div id="connectionLostContainer" class="container">
+          <div id="connectionLostScreen" class="defaultScreen connectionLostScreen">
+            <h1>Connexion perdue</h1>
+            <button class="reload-button" type="button" onclick="reload()">
+              Recharger
+            </button>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- waiting To Reconnect -->
+        <div id="waitingToConnectContainer" class="container">
+          <div id="waitingToConnectScreen" class="defaultScreen waitingToConnectScreen">
+            <h1>En attente de connexion...</h1>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- waiting Game Start -->
+        <div id="waitingGameStartContainer" class="container">
+          <div id="waitingGameStartScreen" class="defaultScreen waitingGameStartScreen">
+            <h1>En attente du début de la partie...</h1>
+            <h2 id="waitingGameStartScreenUsername" class="username">Votre nom : Username</h2>
+            <h2 id="waitingGameStartScreenOnlinePlayers" class="onlinePlayers">X / 50 joueurs connectés</h2>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- Game Is Full -->
+        <div id="gameIsFullContainer" class="container">
+          <div id="gameIsFullScreen" class="defaultScreen gameIsFullScreen">
+            <h1>La partie est pleine !</h1>
+            <h2>Merci de patienter</h2>
+            <button class="reload-button" type="button" onclick="reload()">
+              Recharger
+            </button>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- Game Already Started -->
+        <div id="gameAlreadyStartedContainer" class="container">
+          <div id="gameAlreadyStartedScreen" class="defaultScreen gameAlreadyStartedScreen">
+            <h1>La partie a déjà commencée !</h1>
+            <h2>Merci de patienter</h2>
+            <button class="reload-button" type="button" onclick="reload()">
+              Recharger
+            </button>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- Game -->
+        <div id="gameContainer" class="container">
+          <div id="gameScreen" class="gameScreen">
+            <div class="infos">
+              <h1 id="gameScreenUsername">Username</h1>
+              <h2 id="gameScreenLives" class="lives">Vies restantes: 3</h2>
+            </div>
+            <div class="controls">
+              <button id="gameScreenControlLeft" class="control" type="button" onclick="sendLeft()">
+                <div class="hover">
+                  <svg class="arrow" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
+                  </svg>
+                </div>
+              </button>
+              <button id="gameScreenControlRight" class="control" type="button" onclick="sendRight()">
+                <div class="hover">
+                  <svg class="arrow" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div><!-- END CONTAINER -->
+        
+        <!-- Death -->
+        <div id="deathContainer" class="container">
+          <div id="deathScreen" class="defaultScreen deathScreen">
+            <h1>Vous êtes mort !</h1>
+            <h2 id="deathScreenRank" class="rank">Classement: 0 / 50</h2>
+            <button class="reload-button" type="button" onclick="reload()">
+              Rejouer
+            </button>
+          </div>
+        </div><!-- END CONTAINER -->
+
+        <!-- Won -->
+        <div id="wonContainer" class="container">
+          <div id="wonScreen" class="defaultScreen wonScreen">
+            <h1>Bravo vous avez gagné la partie !</h1>
+            <button class="reload-button" type="button" onclick="reload()">
+              Rejouer
+            </button>
+          </div>
+        </div><!-- END CONTAINER -->
+          
+        <script src="app.js"></script>
+    </body>
+</html>
