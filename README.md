@@ -31,6 +31,11 @@ Armagetron-Advanced Like designed to be played on a movie room.
       -Execute it by using : java -jar build/libs/yourJar.jar
       -You will need Apache or LiveShare(VSCode) to run your website in your WIFI.
       -If someone want to play with you he has to be on the same WIFI and go to : http://yourIpAdress:yourPort/yourFilePath/index.html
+
+Every resources in master branch !
+
+![E-tron](https://raw.githubusercontent.com/senisonn/E-TRON/main/Etron.jpg)
+
     
 
     
